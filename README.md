@@ -25,7 +25,13 @@ Rather than optimizing parameters after the fact to force an upward curve, this 
 ### 1. Trending Regime (`2023-03-11` to `2023-04-01`)
 Directional momentum outweighed stop-loss whipsaws and per-trade commissions, producing a net gain over the sample window.
 
+* Return:
+
 <img width="1536" height="762" alt="image_01" src="https://github.com/user-attachments/assets/4f45743f-9497-4ce1-876f-7e2222c62db8" />
+
+* Price chart:
+<img width="1536" height="762" alt="Figure_1" src="https://github.com/user-attachments/assets/7b617639-5ff8-4746-9775-ab7b365dddc1" />
+
 
 
 ### 2. Full Multi-Regime Horizon (`2023-03-11` to `2023-07-24`)
