@@ -22,15 +22,16 @@ Rather than optimizing parameters after the fact to force an upward curve, this 
 
 ## Equity Curve Comparison
 
-### 1. Trending Regime (`2023-03-12` to `2023-04-01`)
+### 1. Trending Regime (`2023-03-11` to `2023-04-01`)
 Directional momentum outweighed stop-loss whipsaws and per-trade commissions, producing a net gain over the sample window.
 
-![Trending Regime Equity Curve](assets/march_2023_regime.png)
+<img width="1536" height="762" alt="image_01" src="https://github.com/user-attachments/assets/4f45743f-9497-4ce1-876f-7e2222c62db8" />
 
-### 2. Full Multi-Regime Horizon (`2023-03-12` to `2023-07-25`)
+
+### 2. Full Multi-Regime Horizon (`2023-03-11` to `2023-07-24`)
 Exposed to sideways price action without a macro regime filter, frequent false breakouts and round-trip transaction fees gradually eroded capital.
 
-![Full Horizon Equity Curve](assets/full_2023_decay.png)
+<img width="1536" height="762" alt="image_02" src="https://github.com/user-attachments/assets/529dcea2-ebb7-4882-9261-4e1e73c50ba3" />
 
 ---
 
