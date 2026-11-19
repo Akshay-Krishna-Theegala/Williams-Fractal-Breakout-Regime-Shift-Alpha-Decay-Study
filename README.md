@@ -63,6 +63,7 @@ To keep the evaluation honest and free of common backtest distortions, the simul
 * Unfiltered Breakouts Struggle in Chop: Without a trend-strength or volatility filter (such as ADX, Bollinger Band width, or higher-timeframe moving average alignment), swing breakouts get whipsawed in sideways markets.
 
 * Future Exploration: Testing higher timeframes (1h / 4h) and adding regime filters to reduce false signals when volatility contracts.
+* Even under clean, standardized assumptions—fixed parameters, no look-ahead bias, realistic compounding, and flat transaction fees—a simple indicator-based strategy like a Williams Fractal breakout on short intraday bars can easily break down once market conditions shift. A strong short-term window does not guarantee lasting edge; testing across longer, multi-regime horizons is essential to see where a rule thrives, where it gets chopped up, and how alpha decays over time.
 
 Author: Akshay Krishna Theegala
 ## Repository Structure
