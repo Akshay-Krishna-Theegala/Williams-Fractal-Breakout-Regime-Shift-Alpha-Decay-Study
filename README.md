@@ -46,11 +46,11 @@ To keep the evaluation honest and free of common backtest distortions, the simul
 ---
 
 ## Key Takeaways & Next Steps
-Don't Trust Short Windows Alone: A great short-term curve is rarely enough proof; longer multi-regime testing is where alpha decay shows up.
+* Don't Trust Short Windows Alone: A great short-term curve is rarely enough proof; longer multi-regime testing is where alpha decay shows up.
 
-Unfiltered Breakouts Struggle in Chop: Without a trend-strength or volatility filter (such as ADX, Bollinger Band width, or higher-timeframe moving average alignment), swing breakouts get whipsawed in sideways markets.
+* Unfiltered Breakouts Struggle in Chop: Without a trend-strength or volatility filter (such as ADX, Bollinger Band width, or higher-timeframe moving average alignment), swing breakouts get whipsawed in sideways markets.
 
-Future Exploration: Testing higher timeframes (1h / 4h) and adding regime filters to reduce false signals when volatility contracts.
+* Future Exploration: Testing higher timeframes (1h / 4h) and adding regime filters to reduce false signals when volatility contracts.
 
 Author
 Akshay Krishna Theegala
