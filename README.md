@@ -1,0 +1,56 @@
+# Williams Fractal Breakout: Regime Shift & Alpha Decay Study
+
+A Python backtesting case study examining **market regime dependency**, **alpha decay**, and **transaction cost friction** on a Bill Williams Fractal breakout strategy across historical BTC/TUSD 5-minute intervals.
+
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![Backtest](https://img.shields.io/badge/Backtest-Compounded%20%26%20Fee--Adjusted-green)
+![Focus](https://img.shields.io/badge/Research-Regime%20Analysis-lightgrey)
+
+---
+
+## Overview
+
+Quantitative trading rules rarely fail all at once—more often, they perform well in one market environment and quietly degrade when underlying volatility or trend structure shifts. 
+
+This repository documents a controlled experiment on a classic swing-pivot breakout system (`period = 20`) with a fixed stop-loss mechanism:
+* **Favorable Regime (March 2023):** Strong directional price swings allowed breakout entries to capture sustained moves, growing a $1,000 starting balance to a peak of ~$1,142 and closing the window near ~$1,081 after fees.
+* **Extended Multi-Regime Window (March – July 2023):** Once market conditions transitioned into prolonged consolidation and mean-reverting chop, the same ruleset suffered steady alpha decay, drawing the portfolio down toward ~$695.
+
+Rather than optimizing parameters after the fact to force an upward curve, this project preserves both outcomes to illustrate how unconditioned breakout models behave across changing regimes.
+
+---
+
+## Equity Curve Comparison
+
+### 1. Trending Regime (`2023-03-12` to `2023-04-01`)
+Directional momentum outweighed stop-loss whipsaws and per-trade commissions, producing a net gain over the sample window.
+
+![Trending Regime Equity Curve](assets/march_2023_regime.png)
+
+### 2. Full Multi-Regime Horizon (`2023-03-12` to `2023-07-25`)
+Exposed to sideways price action without a macro regime filter, frequent false breakouts and round-trip transaction fees gradually eroded capital.
+
+![Full Horizon Equity Curve](assets/full_2023_decay.png)
+
+---
+
+## Methodology & Backtest Design
+
+To keep the evaluation honest and free of common backtest distortions, the simulation enforces three constraints:
+
+* **Confirmation-Aligned Signals:** Williams Fractals require $N$ subsequent bars to confirm a local swing high or low. All entry and exit triggers are shifted forward by `period` bars (`shift(period)`) so decisions only occur after a pivot is observable in real time.
+* **Compounding Position Sizing:** Returns are computed multiplicatively on available equity rather than summing raw price differences, ensuring position sizes scale realistically with account balance.
+* **Execution Friction & Stop-Loss Checks:** Each entry and exit incurs a `0.05%` fee (`fee_pct = 0.0005`), and open long positions evaluate intra-bar `Low` prices against the active stop-loss threshold. *(Note: Slippage during rapid volatility spikes and order-book depth constraints are approximated through the flat fee rate rather than tick-level execution modeling.)*
+
+---
+
+## Repository Structure
+
+```text
+├── assets/
+│   ├── march_2023_regime.png     # Equity curve during favorable trend conditions
+│   └── full_2023_decay.png       # Equity curve across extended multi-regime data
+├── Binance_data.py               # Binance public REST API client for 5m OHLCV data
+├── Williams_Fractals.py          # Fractal detection, stop-loss logic, and backtest loop
+├── requirements.txt              # Project dependencies
+└── README.md                     # Study overview and findings
