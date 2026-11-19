@@ -52,8 +52,7 @@ To keep the evaluation honest and free of common backtest distortions, the simul
 
 * Future Exploration: Testing higher timeframes (1h / 4h) and adding regime filters to reduce false signals when volatility contracts.
 
-## Author:
-Akshay Krishna Theegala
+## Author: Akshay Krishna Theegala
 ## Repository Structure
 
 ```text
