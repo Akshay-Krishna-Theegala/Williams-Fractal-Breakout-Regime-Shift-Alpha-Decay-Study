@@ -45,13 +45,19 @@ To keep the evaluation honest and free of common backtest distortions, the simul
 
 ---
 
+## Key Takeaways & Next Steps
+Don't Trust Short Windows Alone: A great short-term curve is rarely enough proof; longer multi-regime testing is where alpha decay shows up.
+
+Unfiltered Breakouts Struggle in Chop: Without a trend-strength or volatility filter (such as ADX, Bollinger Band width, or higher-timeframe moving average alignment), swing breakouts get whipsawed in sideways markets.
+
+Future Exploration: Testing higher timeframes (1h / 4h) and adding regime filters to reduce false signals when volatility contracts.
+
+Author
+Akshay Krishna Theegala
 ## Repository Structure
 
 ```text
-├── assets/
-│   ├── march_2023_regime.png     # Equity curve during favorable trend conditions
-│   └── full_2023_decay.png       # Equity curve across extended multi-regime data
+|
 ├── Binance_data.py               # Binance public REST API client for 5m OHLCV data
 ├── Williams_Fractals.py          # Fractal detection, stop-loss logic, and backtest loop
-├── requirements.txt              # Project dependencies
 └── README.md                     # Study overview and findings
