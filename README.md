@@ -29,7 +29,7 @@ Directional momentum outweighed stop-loss whipsaws and per-trade commissions, pr
 
 <img width="1536" height="762" alt="image_01" src="https://github.com/user-attachments/assets/4f45743f-9497-4ce1-876f-7e2222c62db8" />
 
-* Price chart:
+* Price Chart:
 <img width="1536" height="762" alt="Figure_1" src="https://github.com/user-attachments/assets/7b617639-5ff8-4746-9775-ab7b365dddc1" />
 
 
@@ -37,7 +37,13 @@ Directional momentum outweighed stop-loss whipsaws and per-trade commissions, pr
 ### 2. Full Multi-Regime Horizon (`2023-03-11` to `2023-07-24`)
 Exposed to sideways price action without a macro regime filter, frequent false breakouts and round-trip transaction fees gradually eroded capital.
 
+* Return:
+
 <img width="1536" height="762" alt="image_02" src="https://github.com/user-attachments/assets/529dcea2-ebb7-4882-9261-4e1e73c50ba3" />
+
+* Price Chart:
+<img width="1000" height="600" alt="Figure_2" src="https://github.com/user-attachments/assets/42998ae9-cf7b-4071-b2c8-5accbac0efea" />
+
 
 ---
 
